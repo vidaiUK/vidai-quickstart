@@ -1,5 +1,11 @@
 # Vidai — the AI control plane
 
+[![Latest release](https://img.shields.io/github/v/release/vidaiUK/vidai-quickstart?include_prereleases&sort=semver&label=latest%20release&color=0070F3)](https://github.com/vidaiUK/vidai-quickstart/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/vidaiUK/vidai-quickstart/total?label=downloads&color=0070F3)](https://github.com/vidaiUK/vidai-quickstart/releases)
+[![Signed: cosign + Rekor](https://img.shields.io/badge/signed-cosign%20%2B%20Rekor-0070F3)](https://vidai.uk/cosign)
+[![Licence: Commercial](https://img.shields.io/badge/licence-Commercial%20(Community%20free)-64748B)](https://vidai.uk/pricing)
+[![Built in Scotland](https://img.shields.io/badge/built%20in-Scotland-64748B)](https://vidai.uk/about)
+
 **Govern, cost and secure every enterprise LLM request, from within your own
 network. Nothing leaves.**
 
@@ -23,6 +29,8 @@ upgrade is in the release tarballs below.
 &nbsp;·&nbsp;
 [Request a demo](https://vidai.uk/contact)
 
+
+
 ---
 
 ## Proof, not adjectives
@@ -43,9 +51,9 @@ decides which features unlock at runtime. There is no separate download.
 
 | Edition    | What you get                                                                                                          | How you receive the licence                                                                                              |
 | ---------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Community  | Multi-provider routing with fallback, cost engine, regex guardrails, teams, rate limits, request logs. Free, no expiry. | **Self-serve.** Sign in at [portal.vidai.uk](https://portal.vidai.uk), generate a licence, download `vidai.license`.    |
-| Scale      | Everything in Community, plus the full audit-grade ledger, policy-based compliance routing, BI Tables, HMAC webhooks. | **Email.** Start at [vidai.uk/contact](https://vidai.uk/contact). Your `vidai.license` arrives once licensing is scoped. |
-| Enterprise | Everything in Scale, plus VidaiGuard ML guardrails, enterprise identity (SSO / LDAP), priority support and SLA.       | **Email.** Start at [vidai.uk/contact](https://vidai.uk/contact). Your `vidai.license` arrives once licensing is scoped. |
+| Community  | Multi-provider routing with fallback, cost engine, regex guardrails, teams, rate limits, request logs. Free, no expiry. Includes free public rate-card server (best-effort SLA — credentials in the portal alongside your licence). | **Self-serve.** Sign in at [portal.vidai.uk](https://portal.vidai.uk), generate a licence, download `vidai.license`.    |
+| Scale      | Everything in Community, plus the full audit-grade ledger, policy-based compliance routing, BI Tables, HMAC webhooks. | **Email.** Start at [vidai.uk/contact](https://vidai.uk/contact). Your `vidai.license` and rate-card server details arrive once licensing is scoped. |
+| Enterprise | Everything in Scale, plus VidaiGuard ML guardrails, enterprise identity (SSO / LDAP), priority support and SLA.       | **Email.** Start at [vidai.uk/contact](https://vidai.uk/contact). Your `vidai.license` and rate-card server details arrive once licensing is scoped. |
 
 Commercial use of Community is by approval — your licence acknowledgement
 covers that. Full edition feature breakdown:
@@ -88,6 +96,39 @@ this on first sign-in** — `setup.sh` prints the same reminder at the end.
 Full installation, upgrade and operational reference:
 [the bundled README inside the tarball](https://github.com/vidaiUK/vidai-quickstart/releases/latest)
 and the [admin guide on docs.vidai.uk](https://docs.vidai.uk).
+
+---
+
+## After first sign-in
+
+Two things to do before you start sending real traffic through. Both
+take a couple of minutes.
+
+**1. Change the admin password.** The default `admin@example.com` /
+`changeme123` is documented in this file — anyone who reads the README
+knows it. Change it as the first action you take in the dashboard.
+
+**2. Configure the rate-card server.** Vidai prices every request as it
+returns, but only if it knows what each model costs. The rate-card
+server is the data source. Until it's configured, request logs still
+flow, but the cost-attribution columns stay empty.
+
+- **Community** — sign in at [portal.vidai.uk](https://portal.vidai.uk).
+  Your free rate-card server URL and API credentials are shown alongside
+  your licence download. Paste them into the dashboard:
+  *Settings → Rate cards → Configure*. Best-effort SLA — public rate-card
+  service, refreshed on a standard cadence, no service guarantee. This is
+  enough for cost visibility, budgets, per-team attribution and
+  spend-circuit alerts.
+
+- **Scale / Enterprise** — your rate-card server URL and credentials are
+  in the same email that delivered your `vidai.license`. Paste them into
+  *Settings → Rate cards → Configure*. Enterprise customers can swap in
+  their own self-hosted rate-card server later if they prefer.
+
+Once configured, the full cost engine activates: pricing-at-return,
+team / model / project attribution, budgets, the works. The
+[admin guide](https://docs.vidai.uk) walks through what each surface does.
 
 ---
 
