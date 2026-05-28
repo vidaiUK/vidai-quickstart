@@ -1,7 +1,6 @@
 # Vidai — the AI control plane
 
 [![Latest release](https://img.shields.io/github/v/release/vidaiUK/vidai-quickstart?include_prereleases&sort=semver&label=latest%20release&color=0070F3)](https://github.com/vidaiUK/vidai-quickstart/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/vidaiUK/vidai-quickstart/total?label=downloads&color=0070F3)](https://github.com/vidaiUK/vidai-quickstart/releases)
 [![Signed: cosign + Rekor](https://img.shields.io/badge/signed-cosign%20%2B%20Rekor-0070F3)](https://vidai.uk/cosign)
 [![Licence: Commercial](https://img.shields.io/badge/licence-Commercial%20(Community%20free)-64748B)](https://vidai.uk/pricing)
 [![Built in Scotland](https://img.shields.io/badge/built%20in-Scotland-64748B)](https://vidai.uk/about)
