@@ -1,0 +1,150 @@
+name: 🐞 Bug report
+description: Something is broken or behaving unexpectedly.
+title: "[bug] "
+labels: ["bug", "needs-triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report.
+
+        Before filing, please confirm:
+        - The version you're running is the **latest release** (or a recent pre-release).
+        - You've checked existing issues for a duplicate.
+        - If this is a **security vulnerability**, do NOT file it here — email security@vidai.uk instead.
+
+  - type: input
+    id: version
+    attributes:
+      label: Vidai version
+      description: The exact release tag you're running, e.g. `0.8.0-beta.4`. Find it with `./vidai status` or in your `.env` file.
+      placeholder: "0.8.0-beta.4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Edition
+      description: Helps us prioritise. Leave at default if you prefer not to say.
+      options:
+        - Prefer not to say
+        - Community
+        - Scale
+        - Enterprise
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      description: Which part of the stack is misbehaving? Pick the closest match.
+      options:
+        - Install / setup.sh
+        - vidai-server (Rust core)
+        - bff (FastAPI backend)
+        - frontend (dashboard)
+        - docs (embedded admin guide)
+        - vidai CLI / operations
+        - docker-compose / orchestration
+        - Other / unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Describe what actually occurred. Be specific.
+      placeholder: |
+        Example: After running `./setup.sh` with the bundled-postgres profile,
+        `./vidai start` reports vidai-server unhealthy. The container exits with
+        code 1 every 30 seconds.
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-expected
+    attributes:
+      label: What you expected
+      description: What did you expect to happen instead?
+      placeholder: |
+        Example: vidai-server should reach healthy state within 60 seconds of start.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Minimum sequence we can run to see the same behaviour.
+      placeholder: |
+        1. Extract vidai-quickstart-0.8.0-beta.4.tar.gz
+        2. Drop a valid Community vidai.license next to docker-compose.yml
+        3. Run `./setup.sh` and accept all defaults
+        4. Run `./vidai start`
+        5. Observe vidai-server fails health check
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Paste relevant log output. Most useful: `./vidai logs vidai-server` (or the affected service)
+        and the contents of `./setup-logs/<latest>/summary.txt`.
+
+        **Redact any licence keys, API secrets, or customer data before pasting.**
+      render: shell
+      placeholder: |
+        $ ./vidai logs vidai-server --tail 50
+        [paste output here]
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        Host OS, Docker version, Compose version. If you've configured a rate-card server,
+        external Postgres, or anything non-default in `.env`, mention it.
+      placeholder: |
+        OS: Ubuntu 24.04 LTS (x86_64)
+        Docker: 27.3.1
+        Compose: v2.29.7
+        Postgres mode: bundled
+        Rate-card server: configured (Community public)
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots (optional)
+      description: |
+        Drag-and-drop images of the dashboard, error messages, or anything else
+        visual that helps. GitHub uploads them inline.
+      placeholder: "Paste or drag screenshots here."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: verify
+    attributes:
+      label: Sanity checks
+      description: Quickly rule out tampered downloads or misconfigured trust paths.
+      options:
+        - label: I downloaded the release tarball from the official GitHub release page.
+          required: true
+        - label: |
+            I have either verified the cosign signature on the tarball
+            (`cosign verify-blob --bundle … --key cosign.pub …`) OR I am
+            running an internal-only build (`vidai-quickstart-internal-…`).
+          required: false
+        - label: I confirm this is NOT a security vulnerability (if it is, I will close this issue and email security@vidai.uk).
+          required: true

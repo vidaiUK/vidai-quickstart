@@ -1,0 +1,53 @@
+name: ❓ Question / other
+description: A how-to question, clarification, or anything that isn't a bug or feature request.
+title: "[question] "
+labels: ["question", "needs-triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for questions that aren't bugs or feature requests.
+
+        **Before filing, check:**
+        - [docs.vidai.uk](https://docs.vidai.uk) — install guides, API reference, admin guide.
+        - The README and `VERIFY.md` inside the release tarball.
+        - Existing issues on this repo (search the open + closed tabs).
+
+        **Wrong place to ask:**
+        - Licence pricing / renewals → [vidai.uk/contact](https://vidai.uk/contact)
+        - Security disclosures → email security@vidai.uk privately
+        - Account / billing questions → email support@vidai.uk
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What are you trying to do?
+      description: Frame the underlying goal, not just the symptom. We can often suggest a better path once we understand the outcome.
+      placeholder: |
+        Example: I want to route requests for our financial-services team
+        to Bedrock's eu-west-2 region only, and have it visible in the
+        audit log. What's the right way to configure that?
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried or checked already?
+      description: Saves us from suggesting things you've already ruled out.
+      placeholder: |
+        Example: Read docs.vidai.uk/policies, configured a routing rule
+        with region tag eu-west-2, but the audit log shows entries with
+        "region=unknown".
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Vidai version
+      description: If your question is version-specific, the tag from `./vidai status`.
+      placeholder: "0.8.0-beta.4"
+    validations:
+      required: false

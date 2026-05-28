@@ -1,0 +1,80 @@
+name: 💡 Feature request
+description: Suggest a capability or improvement.
+title: "[feature] "
+labels: ["enhancement", "needs-triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. The best feature requests start with the
+        **problem you're trying to solve**, not the implementation you have
+        in mind. We'll often find a better way once we understand the
+        outcome you need.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Describe the real-world situation that makes this feature useful. Avoid jumping to a specific implementation.
+      placeholder: |
+        Example: Our compliance team needs to prove that prompt content
+        containing customer PII was redacted before reaching the model
+        provider. Today I can only tell them what regex guardrails are
+        configured, not what they actually masked in a given window.
+    validations:
+      required: true
+
+  - type: textarea
+    id: who-is-blocked
+    attributes:
+      label: Who is affected?
+      description: |
+        How many people on your team / in your organisation are blocked by this?
+        Is it a regular workflow or a one-off?
+      placeholder: |
+        Example: Compliance lead (weekly), CISO (quarterly audit window),
+        plus the platform team that has to extract data manually today.
+    validations:
+      required: false
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: What are you doing today?
+      description: |
+        How are you working around this currently? If there's no workaround
+        and the absence is blocking, say so.
+      placeholder: |
+        Example: We grep the request-log SQLite database with a custom script
+        and export to CSV. Brittle and doesn't survive log rotation.
+    validations:
+      required: false
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would a good solution look like?
+      description: |
+        Optional. If you have a concrete idea for the feature, share it.
+        If not, the previous answers are enough.
+      placeholder: |
+        Example: A "redaction events" view in the dashboard showing
+        per-rule mask counts and the request IDs they fired on, exportable
+        to CSV/Parquet over a time window.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Edition
+      description: Helps us understand which tier benefits.
+      options:
+        - Prefer not to say
+        - Community
+        - Scale
+        - Enterprise
+      default: 0
+    validations:
+      required: true

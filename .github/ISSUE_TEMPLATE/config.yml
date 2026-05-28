@@ -1,0 +1,33 @@
+# Issue routing for vidaiUK/vidai-quickstart.
+# Synced from VidaiDeployment's release-assets/issue-templates/.
+#
+# `blank_issues_enabled: false` forces customers to pick a template
+# from the chooser, which makes incoming reports actionable instead
+# of empty.
+
+blank_issues_enabled: false
+
+contact_links:
+  - name: 🔐 Security disclosure — do NOT use public issues
+    url: mailto:security@vidai.uk
+    about: |
+      Security vulnerabilities (CVE-class, key compromise, auth bypass, etc.)
+      MUST be reported privately to security@vidai.uk. Do not file them as
+      public GitHub issues. We acknowledge within one business day.
+
+  - name: 💼 Licensing — Scale and Enterprise enquiries
+    url: https://vidai.uk/contact
+    about: |
+      Questions about Scale or Enterprise editions, licence terms, renewals
+      or commercial use. Public issues are not the right place for these.
+
+  - name: 📖 Documentation
+    url: https://docs.vidai.uk
+    about: |
+      Install guides, API reference, admin guide. Most "how do I…" questions
+      are answered there.
+
+  - name: 🌐 Vidai homepage
+    url: https://vidai.uk
+    about: |
+      Product, pricing, performance, architecture.
