@@ -37,7 +37,7 @@ upgrade is in the release tarballs below.
 - **25 MB** binary — the whole engine that sits in your AI traffic.
 - **21,803 RPS** on a single node, verified peak.
 - **1.95 ms** median latency under load.
-- **0** bytes leave your network boundary.
+- **No phoning home** — nothing about your requests leaves your network.
 
 Full methodology on the [Performance page](https://vidai.uk/performance).
 
