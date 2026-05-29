@@ -114,16 +114,17 @@ flow, but the cost-attribution columns stay empty.
 
 - **Community** — sign in at [portal.vidai.uk](https://portal.vidai.uk).
   Your free rate-card server URL and API credentials are shown alongside
-  your licence download. Paste them into the dashboard:
-  *Settings → Rate cards → Configure*. Best-effort SLA — public rate-card
-  service, refreshed on a standard cadence, no service guarantee. This is
-  enough for cost visibility, budgets, per-team attribution and
-  spend-circuit alerts.
+  your licence download. In the Vidai dashboard, go to *Observe → Costs →
+  Ratecard (settings)*, paste the URL and credentials, then *Sync the
+  ratecard*. Best-effort SLA — public rate-card service, refreshed on a
+  standard cadence, no service guarantee. This is enough for cost
+  visibility, budgets, per-team attribution and spend-circuit alerts.
 
 - **Scale / Enterprise** — your rate-card server URL and credentials are
-  in the same email that delivered your `vidai.license`. Paste them into
-  *Settings → Rate cards → Configure*. Enterprise customers can swap in
-  their own self-hosted rate-card server later if they prefer.
+  in the same email that delivered your `vidai.license`. Same dashboard
+  path: *Observe → Costs → Ratecard (settings)*, paste, then *Sync the
+  ratecard*. Enterprise customers can swap in their own self-hosted
+  rate-card server later if they prefer.
 
 Once configured, the full cost engine activates: pricing-at-return,
 team / model / project attribution, budgets, the works. The
