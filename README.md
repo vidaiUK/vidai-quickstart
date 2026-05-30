@@ -169,9 +169,9 @@ If that one line is intriguing, the
 ## Versions
 
 Releases are listed on the [Releases page](https://github.com/vidaiUK/vidai-quickstart/releases).
-Each release tag is `vX.Y.Z`. Pre-release versions
-(`-alpha`, `-beta`, `-rc`) are marked accordingly and are not promoted to
-the "latest" pointer.
+Each release tag is `vX.Y.Z`. Tag suffixes (`-beta`, `-rc`) indicate
+maturity along the path to a stable; every release here is signed,
+verified and ready to install.
 
 Vidai is a **commercial** product. Free for Community use, contact-led
 for Scale and Enterprise. See [vidai.uk/pricing](https://vidai.uk/pricing)
