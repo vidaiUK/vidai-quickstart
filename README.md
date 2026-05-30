@@ -28,8 +28,6 @@ upgrade is in the release tarballs below.
 &nbsp;·&nbsp;
 [Request a demo](https://vidai.uk/contact)
 
-> **Pre-release.** Version `0.8.0-beta.4` is bleeding-edge and may contain issues. Recommended for evaluation, staging and early-adopter integration testing; pin a stable tag for production. Report issues via the [Issues tab](https://github.com/vidaiUK/vidai-quickstart/issues).
-
 ---
 
 ## Proof, not adjectives
