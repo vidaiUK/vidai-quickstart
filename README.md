@@ -5,6 +5,27 @@
 [![Licence: Commercial](https://img.shields.io/badge/licence-Commercial%20(Community%20free)-64748B)](https://vidai.uk/pricing)
 [![Built in Scotland](https://img.shields.io/badge/built%20in-Scotland-64748B)](https://vidai.uk/about)
 
+> [!IMPORTANT]
+> **🚀 Vidai 1.0 — launching mid-November 2026.**
+> The next chapter of the governance-first AI control room. Highlights:
+>
+> - **Multi-language UI** — admin console translated for global teams
+> - **Team management** — groups, delegated administration, cleaner permissions
+> - **Geo routing & geo compliance** — dedicated surfaces for region-aware
+>   routing and data-residency enforcement
+> - **FinOps & Compliance roles** — purpose-built role templates for the
+>   people who own cost and risk
+> - **Stirling-Minimo integration** — the [Stirling-Minimo model series](https://huggingface.co/VidaiUK),
+>   protected end-to-end by VidaiGuard
+> - **Self-service for end users** — a lot more that users can do for
+>   themselves, without an admin in the loop
+>
+> **Heads-up for existing deployments:** 1.0 introduces breaking changes
+> to `.env` keys, API paths, and schema. A migration guide ships with
+> the release.
+>
+> [Watch this repo](../../subscription) to be notified when 1.0 lands.
+
 **Govern, cost and secure every enterprise LLM request, from within your own
 network. Nothing leaves.**
 
