@@ -20,9 +20,9 @@
 > - **Self-service for end users** — a lot more that users can do for
 >   themselves, without an admin in the loop
 >
-> **Heads-up for existing deployments:** 1.0 introduces breaking changes
-> to `.env` keys, API paths, and schema. A migration guide ships with
-> the release.
+> **Heads-up for existing deployments:** 1.0 is a new installation only —
+> there is no in-place upgrade from 0.8.x. Moving an existing deployment
+> across? [Contact us](https://vidai.uk/contact) for migration support.
 >
 > [Watch this repo](../../subscription) to be notified when 1.0 lands.
 
